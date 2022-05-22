@@ -1,0 +1,30 @@
+@mixin icon($size: 1em) {
+	width: $size;
+	height: auto;
+	fill: currentColor;
+}
+
+@keyframes loading-dots {
+	from {
+		content: "";
+	}
+
+	33% {
+		content: ".";
+	}
+
+	66% {
+		content: "..";
+	}
+
+	to {
+		content: "...";
+	}
+}
+
+@mixin loading-dots($timing: 3s) {
+	&:after {
+		content: "";
+		animation: loading-dots $timing linear infinite;
+	}
+}

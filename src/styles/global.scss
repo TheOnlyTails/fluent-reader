@@ -1,0 +1,23 @@
+body {
+	margin: 0;
+	block-size: 100vh;
+	font-family: var(--fds-font-family-text);
+	background: var(--fds-solid-background-base);
+	color: var(--fds-text-primary);
+
+	display: grid;
+	grid-template-rows: min-content 1fr;
+
+
+	@supports (block-size: 100dvh) {
+		block-size: 100dvh;
+	}
+}
+
+h1, h2, h3 {
+	font-family: var(--fds-font-family-display);
+}
+
+.button {
+	cursor: pointer !important;
+}
